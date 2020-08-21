@@ -1,0 +1,92 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+}
+
+.App {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90vw;
+	height: 90vh;
+	box-shadow: 0 0 0 2px #FFF inset;
+}
+
+.videoContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 72vw;
+	height: 90vh;
+	background-color: #111;
+}
+
+.videoContainer > h1 {
+	color: #FFF;
+}
+
+.videoList {
+	width: 18vw;
+	height: 90vh;
+	background-color: #111;
+	box-shadow: 0 0 5px #000 inset;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.videoList::-webkit-scrollbar {
+	width: 5px;
+	height: 100%;
+}
+
+.videoList::-webkit-scrollbar-thumb {
+	width: 5px;
+	background-color: #111;
+	border-radius: 5px;
+}
+
+.videoList::-webkit-scrollbar-track {
+	width: 5px;
+	height: 100%;
+	background-color: #222;
+}
+
+.videoList > li {
+	display: block;
+	list-style: none;
+	width: 100%;
+	height: 72px;
+	color: #FFF;
+	font: normal 1em "Arial";
+	line-height: 72px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-indent: .4em;
+	overflow: hidden;
+	transition: all .1s linear 0s;
+	cursor: pointer;
+}
+
+.videoList > li:hover {
+	background-color: #888;
+	opacity: .5;
+}
+
+.select {
+	background-color: #FFF;
+	color: #000!important;
+	transition: all .1s linear 0s;
+}
+
+iframe {
+	border: 0;
+}
