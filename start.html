@@ -29,13 +29,58 @@
 			height: 100%;
 		}
 
+		@media screen and (max-width: 700px) {
+			.movies {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		@media screen and (min-width: 700px) and (max-width: 1200px) {
+			.movies {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		}
+
+		@media screen and (min-width: 1200px) {
+			.movies {
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+			}
+		}
+
 		.movies {
-			display: flex;
-			justify-content: space-around;
+			display: grid;
+			justify-items: center;
+			overflow-x: hidden;
+			overflow-y: scroll;
 			align-items: center;
-			flex-flow: row wrap;
 			width: 75%;
 			height: 75%;
+		}
+
+		.movies::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		.movies::-webkit-scrollbar-track {
+			border-radius: 5px;
+			background-color: #181818;
+		}
+
+		.movies::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background-image: linear-gradient(
+				45deg,
+				#363636 0%,
+				#363636 20%,
+				#181818 20%,
+				#181818 40%,
+				#363636 40%,
+				#363636 60%,
+				#181818 60%,
+				#181818 80%,
+				#363636 80%,
+				#363636 100%
+			)
 		}
 
 		.movie {
@@ -104,6 +149,7 @@
 	<div class="container">
 		<div class="movies"></div>
 	</div>
+	<script type="text/javascript" src="./lib/all.js"></script>
 	<script type="text/javascript">
 		class Button {
 			constructor( txt ){
@@ -113,12 +159,13 @@
 				for( let i = 0 ; i < 4 ; i ++ ) div.appendChild( document.createElement("span") );
 				document.querySelector(".movies").appendChild( div );
 				div.addEventListener("click",e=>{
-					window.location.href = `./static/${txt}.html`;
+					setTimeout(function(){
+						window.location.href = `./static/${txt}.html`;	
+					}, 500);
 				});
 			}
 		}
 		movies.map( item => new Button( item ) );
-
 	</script>
 </body>
 </html>
