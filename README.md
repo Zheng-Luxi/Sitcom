@@ -1,6 +1,9 @@
+### 链接 :: Link
+#### [https://zheng-luxi.github.io/Sitcom/start.html](https://zheng-luxi.github.io/Sitcom/start.html)
+---
 ### 介绍 :: Introduction
-#### 你是否为看影视剧需要VIP而烦恼?点击这里选择已经部署好的影视剧吧!这个项目已经部署在Github Pages上了,你可以在上面看免费的影视剧!
-#### Are you worried about VIP? Click here to select a movie or TV play that has been deployed. This project has been deployed on Github Pages. You can watch free movies and TV series on it!
+#### 你是否为看影视剧需要VIP而烦恼?点击[这里](https://zheng-luxi.github.io/Sitcom/start.html)选择已经部署好的影视剧吧!这个项目已经部署在Github Pages上了,你可以在上面看免费的影视剧!
+#### Are you worried about VIP? Click [here](https://zheng-luxi.github.io/Sitcom/start.html) to select a movie or TV play that has been deployed. This project has been deployed on Github Pages. You can watch free movies and TV series on it!
 ---
 ### 指南 :: Guide
 #### 首先你要打开这个项目的Github Pages网页,链接已经放在了这个文件的开始处,点击链接进入网站,选择一部你想看的影视剧吧!
