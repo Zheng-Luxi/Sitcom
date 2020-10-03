@@ -1,0 +1,172 @@
+* {
+	padding: 0;
+	margin: 0;
+	transition: all .3s ease 0s;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-image: radial-gradient( at 0 0, #363636, #181818 );
+}
+
+.container {
+	display: grid;
+	grid-template: 2fr 5fr / 1fr;
+	justify-items: center;
+	align-items: center;
+	width: 75%;
+	height: 100%;
+}
+
+.search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+}
+
+#search {
+	width: calc( 100% - 10px );
+	width: 90%;
+	padding-left: 10px;
+	background-color: transparent;
+	color: #FFF;
+	font: normal calc( .9vw + .9vh ) Consolas;
+	border: 0;
+	border-radius: 10px;
+	box-shadow: 0 0 0 2px #FFF inset;
+	outline: none;
+}
+
+@media screen and (max-width: 700px) {
+	.movies {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#search {
+		height: 30%;
+	}
+}
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+	.movies {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	#search {
+		height: 40%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.movies {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	#search {
+		height: 60%;
+	}
+}
+
+.movies {
+	display: grid;
+	justify-items: center;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	align-items: center;
+	width: 100%;
+	height: 75%;
+}
+
+.movies::-webkit-scrollbar {
+	width: 5px;
+}
+
+.movies::-webkit-scrollbar-track {
+	border-radius: 5px;
+	background-color: #181818;
+}
+
+.movies::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-image: linear-gradient(
+		45deg,
+		#363636 0%,
+		#363636 20%,
+		#181818 20%,
+		#181818 40%,
+		#363636 40%,
+		#363636 60%,
+		#181818 60%,
+		#181818 80%,
+		#363636 80%,
+		#363636 100%
+	)
+}
+
+.movie {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	width: calc( 5vw + 5vh - 10px );
+	height: calc( 5vw + 5vh - 10px );
+	margin: 25px;
+	padding: 10px;
+	overflow: hidden;
+	position: relative;
+	background-color: transparent;
+	color: #FFF;
+	font: normal calc( .9vw + .9vh ) "Consoloas";
+	border: 3px solid #FFF;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all .2s ease 0s;
+}
+
+.movie:hover {
+	transform: rotate( -45deg ) skew( 10deg, 10deg );
+}
+
+span {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-radius: 10px;
+	border: 3px solid #FFF;
+	opacity: 0;
+}
+
+.movie:hover span:nth-of-type(1) {
+	right: 9px;
+	top: 9px;
+	opacity: .8;
+}
+
+
+.movie:hover span:nth-of-type(2) {
+	right: 18px;
+	top: 18px;
+	opacity: .6;
+}
+
+
+.movie:hover span:nth-of-type(3) {
+	right: 27px;
+	top: 27px;
+	opacity: .4;
+}
+
+
+.movie:hover span:nth-of-type(4) {
+	right: 36px;
+	top: 36px;
+	opacity: .2;
+}
